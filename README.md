@@ -16,9 +16,9 @@
 
 ```typescript
 const shivam = {
-    role: "AI-Powered Backend Developer & Automation Engineer",
+    role: "  AI-Powered Backend Developer & Automation Engineer",
     location: "India 🇮🇳",
-    specialties: ["Backend Architecture", "AI Integration", "Process Automation"],
+    specialties: ["  Backend Architecture", "AI Integration", "Process Automation"],
     currentFocus: "Building scalable systems that work while you sleep",
     motto: "Code smarter, not harder",
     availability: "Open for collaboration & opportunities"
