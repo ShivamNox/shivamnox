@@ -1,4 +1,4 @@
-# <div align="center">![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B+I'm+Shivam+Kumar;AI-Powered+Backend+Developer;Automation+%26+Systems+Engineer;Building+the+Future+with+Code)</div>
+# <div align="center" style="width:100%;">![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B+I'm+Shivam+Kumar;AI-Powered+Backend+Developer;Automation+%26+Systems+Engineer;Building+the+Future+with+Code)</div>
 
 <div align="center">
   
