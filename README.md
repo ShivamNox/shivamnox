@@ -160,7 +160,8 @@ graph TD
 
 <div align="center">
 
-![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=tokyonight&layout=default&font=Redhat-Mono)
+I wrote my first script to auto-fill college forms...
+Now I build systems that handle millions of requests autonomously.
 
 </div>
 
