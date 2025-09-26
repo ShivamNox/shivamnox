@@ -10,8 +10,6 @@
 <div align="center">
   
 [![Profile Views](https://komarev.com/ghpvc/?username=shivamnox&label=Profile%20Views&color=0e75b6&style=for-the-badge)](https://github.com/shivamnox)
-[![Years Badge](https://badges.pufler.dev/years/shivamnox?style=for-the-badge&color=blue&logo=github)](https://github.com/shivamnox)
-[![Repos Badge](https://badges.pufler.dev/repos/shivamnox?style=for-the-badge&color=red&logo=github)](https://github.com/shivamnox)
 
 </div>
 
