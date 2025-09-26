@@ -1,4 +1,11 @@
-# <div align="center" style="width:100%;">![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B+I'm+Shivam+Kumar;AI-Powered+Backend+Developer;Automation+%26+Systems+Engineer;Building+the+Future+with+Code)</div>
+<div align="center">
+
+# 👋 Hi, I'm **Shivam Kumar**
+
+<h2>🚀 AI-Powered Backend Developer & Automation Engineer</h2>
+<h3>💻 Building Scalable Systems • 🤖 Process Automation • ⚡ Performance Optimization</h3>
+
+</div>
 
 <div align="center">
   
@@ -16,9 +23,9 @@
 
 ```typescript
 const shivam = {
-    role: "  AI-Powered Backend Developer & Automation Engineer",
+    role: "AI-Powered Backend Developer & Automation Engineer",
     location: "India 🇮🇳",
-    specialties: ["  Backend Architecture", "AI Integration", "Process Automation"],
+    specialties: ["Backend Architecture", "AI Integration", "Process Automation"],
     currentFocus: "Building scalable systems that work while you sleep",
     motto: "Code smarter, not harder",
     availability: "Open for collaboration & opportunities"
