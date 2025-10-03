@@ -1,29 +1,25 @@
 ## 📊 **GitHub Analytics**
-<div display="flex">
-<div align="center">
-  
-<img width="30%" height="20%" src="https://github-readme-stats.vercel.app/api?username=shivamnox&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
-
-</div>
 
 <div align="center">
-  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shivamnox&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
+
+<a href="https://github.com/shivamnox" style="display:inline-block">
+  <img src="https://github-readme-stats.vercel.app/api?username=shivamnox&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" width="49%" />
+</a><a href="https://github.com/shivamnox" style="display:inline-block">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shivamnox&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="49%" />
+</a>
 
 </div>
-</div>
+
+
 ---
-
 
 ## 🏆 **GitHub Achievements**
 
 <div align="center">
-  
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=shivamnox&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6)
+
+<img src="https://github-profile-trophy.vercel.app/?username=shivamnox&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6" />
 
 </div>
-
-
 
 ---
 
