@@ -20,18 +20,3 @@
 </div>
 
 ---
-
-
-## 🚀 **"Building tomorrow's solutions, one line of code at a time"**
-
-### Thanks for visiting! Let's build something amazing together 🤝
-
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer)
-
-</div>
-
----
-
-<div align="center">
-  <sub>⭐ Star my repositories if you find them interesting!</sub>
-</div>
