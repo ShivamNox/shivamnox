@@ -78,7 +78,7 @@
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 4px solid var(--accent);
+      border: 4px solid #1a1a1a;
       margin-bottom: 1rem;
     }
 
@@ -106,7 +106,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.1);
+      background: #1a1a1a;
       border-radius: 50%;
       color: white;
       text-decoration: none;
@@ -1181,6 +1181,53 @@
 </a>
 
 
+<style>
+    #checkmark-path {
+  stroke-dasharray: 24; /* Total length of path */
+  stroke-dashoffset: 24; /* Hide the stroke initially */
+  animation: draw-check 0.6s ease forwards;
+}
+
+@keyframes draw-check {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+</style>
+
+<div id="success-popup" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28a745;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
+  z-index: 9999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+">
+  <!-- Animated Tick -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path id="checkmark-path" d="M5 13l4 4L19 7" />
+  </svg>
+
+  <!-- Message below tick -->
+  <p style="margin-top: 10px; font-size: 14px;">Message Sent<br>Successfully</p>
+</div>
+
+
+
+
+
   <script>
     // Mobile Navigation Toggle
     function toggleMobileNav() {
@@ -1246,38 +1293,72 @@
       });
     });
 
-    // Form submission
-    const form = document.getElementById("my-form");
-    async function handleSubmit(event) {
-      event.preventDefault();
-      const status = document.getElementById("my-form-status");
-      const data = new FormData(event.target);
-      
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Message Sent Successfully! I will contact you back soon.";
-          form.reset();
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form";
-            }
-          });
-        }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form";
-      });
-    }
-    form.addEventListener("submit", handleSubmit);
 
+
+
+
+
+    // Form submission
+const form = document.getElementById("my-form");
+const popup = document.getElementById("success-popup");
+const checkmarkPath = document.getElementById("checkmark-path");
+const submitButton = form.querySelector('button[type="submit"]');
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  const status = document.getElementById("my-form-status");
+  const data = new FormData(event.target);
+
+  // Disable button and show "Sending..."
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+
+  try {
+    const response = await fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.reset();
+      showSuccessPopup();
+      status.innerHTML = "";
+    } else {
+      const data = await response.json();
+      if (data.errors) {
+        status.innerHTML = data.errors.map(e => e.message).join(", ");
+      } else {
+        status.innerHTML = "Oops! There was a problem submitting your form";
+      }
+    }
+  } catch (error) {
+    status.innerHTML = "Oops! There was a problem submitting your form";
+  }
+
+  // Re-enable button after submission (success or failure)
+  submitButton.disabled = false;
+  submitButton.textContent = "Send Message";
+}
+
+
+function showSuccessPopup() {
+  // Reset animation by removing and re-adding class (or resetting stroke-dashoffset)
+  checkmarkPath.style.animation = "none";
+  void checkmarkPath.offsetWidth;  // Trigger reflow to restart animation
+  checkmarkPath.style.animation = null; // Re-enable animation
+
+  popup.style.display = 'flex';  // Show popup
+
+  setTimeout(() => {
+    popup.style.display = 'none';  // Hide after 3 seconds
+  }, 3000);
+}
+
+form.addEventListener("submit", handleSubmit);
+
+
+// nav section
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -1292,5 +1373,54 @@
       });
     });
   </script>
+  
+  <!--   <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector('#header');
+  const offset = header ? header.offsetHeight : 0;
+
+function smoothScrollTo(target, duration = 2000) {
+  const headerHeight = offset; // header offset
+  const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+  
+  // Maximum scroll position to avoid scrolling beyond document
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollToPosition = Math.min(targetPosition, maxScroll);
+
+  const startPosition = window.scrollY;
+  const distance = scrollToPosition - startPosition;
+  const startTime = performance.now();
+
+  function animation(currentTime) {
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+
+    window.scrollTo(0, startPosition + distance * ease);
+
+    if (progress < 1) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+
+
+  document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetID = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetID);
+      if (target) {
+        smoothScrollTo(target, 2000);
+      }
+    });
+  });
+});
+
+</script> -->
 </body>
 </html>
