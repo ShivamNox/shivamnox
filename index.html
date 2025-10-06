@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -423,13 +424,19 @@
       margin-bottom: 2rem;
     }
 
-    .skill {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: var(--text-primary);
-    }
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between icon and text */
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill i.val {
+  margin-left: auto; /* pushes percentage to the right */
+}
+
 
     .progress-bar-wrap {
       background: var(--border);
@@ -894,7 +901,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Portfolio</h2>
-          <p>Here are some of my backend and automation projects demonstrating my skills in API development, automation scripting, cloud deployments, and DevOps.</p>
+           <blockquote class="intro-quote">Here are some of my backend and automation projects demonstrating my skills in API development, automation scripting, cloud deployments, and DevOps. </blockquote>
         </div>
 
         <div>
@@ -962,7 +969,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Services</h2>
-          <p>I offer a range of backend and automation engineering services to help teams build, scale, and automate infrastructure and systems.</p>
+           <blockquote class="intro-quote">I offer a range of backend and automation engineering services to help teams build, scale, and automate infrastructure and systems. </blockquote>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
@@ -1004,69 +1011,123 @@
         </div>
       </div>
     </section>
-
+    
     <section id="skills" class="section-bg">
-      <div class="container">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>Here are some of the technologies and tools I work with as a backend developer and automation engineer.</p>
+  <div class="container">
+    <div class="section-title">
+      <h2>Skills</h2>
+       <blockquote class="intro-quote">Here are some of the technologies and tools I work with as a backend developer and automation engineer. </blockquote>
+    </div>
+
+    <div class="skills-content">
+      <div>
+        <div class="progress">
+          <span class="skill"><i class="fab fa-node-js"></i> Node.js & Express <i class="val">90%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></div>
         </div>
-
-        <div class="skills-content">
-          <div>
-            <div class="progress">
-              <span class="skill">Node.js & Express <i class="val">90%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></div>
-            </div>
-            <div class="progress">
-              <span class="skill">Python <i class="val">85%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
-            </div>
-            <div class="progress">
-              <span class="skill">REST API / GraphQL <i class="val">90%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></div>
-            </div>
-            <div class="progress">
-              <span class="skill">SQL (PostgreSQL/MySQL) <i class="val">85%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
-            </div>
-            <div class="progress">
-              <span class="skill">MongoDB / Redis <i class="val">75%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 75%"></div></div>
-            </div>
-          </div>
-
-          <div>
-            <div class="progress">
-              <span class="skill">Docker & Kubernetes <i class="val">80%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></div>
-            </div>
-            <div class="progress">
-              <span class="skill">AWS / GCP <i class="val">70%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 70%"></div></div>
-            </div>
-            <div class="progress">
-              <span class="skill">CI/CD (GitHub Actions, Jenkins) <i class="val">80%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></div>
-            </div>
-            <div class="progress">
-              <span class="skill">Automation Scripting <i class="val">85%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
-            </div>
-            <div class="progress">
-              <span class="skill">Git & Version Control <i class="val">95%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 95%"></div></div>
-            </div>
-          </div>
+        <div class="progress">
+          <span class="skill"><i class="fab fa-python"></i> Python <i class="val">85%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+        <div class="progress">
+          <span class="skill"><i class="fas fa-project-diagram"></i> REST API / GraphQL <i class="val">90%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></div>
+        </div>
+        <div class="progress">
+          <span class="skill"><i class="fas fa-database"></i> SQL (PostgreSQL/MySQL) <i class="val">85%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+        <div class="progress">
+          <span class="skill"><i class="fas fa-leaf"></i> MongoDB / Redis <i class="val">75%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 75%"></div></div>
         </div>
       </div>
-    </section>
+
+      <div>
+        <div class="progress">
+          <span class="skill"><i class="fab fa-docker"></i> Docker & Kubernetes <i class="val">80%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></div>
+        </div>
+        <div class="progress">
+          <span class="skill"><i class="fab fa-aws"></i> AWS / GCP <i class="val">70%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 70%"></div></div>
+        </div>
+        <div class="progress">
+          <span class="skill"><i class="fas fa-code-branch"></i> CI/CD (GitHub Actions, Jenkins) <i class="val">80%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></div>
+        </div>
+        <div class="progress">
+          <span class="skill"><i class="fas fa-terminal"></i> Automation Scripting <i class="val">85%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+        <div class="progress">
+          <span class="skill"><i class="fab fa-git-alt"></i> Git & Version Control <i class="val">95%</i></span>
+          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 95%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Helper: animate progress bar
+  function animateProgressBar(bar, valueElement, targetPercent, duration = 1000) {
+    let start = null;
+    let initial = 0;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const currentPercent = Math.floor(progress * targetPercent);
+      bar.style.width = currentPercent + '%';
+      valueElement.textContent = currentPercent + '%';
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  // Observer to detect when #skills section comes into view
+  let hasAnimated = false;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+
+        // Select all progress bars
+        document.querySelectorAll('.progress').forEach(progressEl => {
+          const bar = progressEl.querySelector('.progress-bar');
+          const valueEl = progressEl.querySelector('.val');
+          const target = parseInt(valueEl.textContent.replace('%', ''), 10);
+
+          // Start from 0
+          bar.style.width = '0%';
+          valueEl.textContent = '0%';
+
+          animateProgressBar(bar, valueEl, target, 1000); // animate to target
+        });
+      }
+    });
+  }, {
+    threshold: 0.3 // trigger when 30% of section is visible
+  });
+
+  // Start observing the skills section
+  const skillsSection = document.getElementById('skills');
+  if (skillsSection) {
+    observer.observe(skillsSection);
+  }
+</script>
+
 
     <section id="resume">
       <div class="container">
         <div class="section-title">
           <h2>Resume</h2>
-          <p>Backend Developer & Automation Engineer skilled in Node.js, Python, cloud, databases, and DevOps. Focused on building scalable systems, automating processes, and delivering robust backend solutions.</p>
+           <blockquote class="intro-quote">Backend Developer & Automation Engineer skilled in Node.js, Python, cloud, databases, and DevOps. Focused on building scalable systems, automating processes, and delivering robust backend solutions. </blockquote>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
@@ -1123,7 +1184,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Get in Touch</h2>
-          <p>Interested in working together, or have a question about backend development or automation? Reach out by email or use the form below.</p>
+           <blockquote class="intro-quote">Interested in working together, or have a question about backend development or automation? Reach out by email or use the form below. </blockquote>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
@@ -1182,10 +1243,10 @@
 
 
 <style>
-    #checkmark-path {
-  stroke-dasharray: 24; /* Total length of path */
-  stroke-dashoffset: 24; /* Hide the stroke initially */
-  animation: draw-check 0.6s ease forwards;
+#checkmark-path {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: draw-check 0.9s ease forwards;
 }
 
 @keyframes draw-check {
@@ -1193,6 +1254,7 @@
     stroke-dashoffset: 0;
   }
 }
+
 
 </style>
 
@@ -1202,27 +1264,53 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #28a745;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
   z-index: 9999;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   color: white;
   font-family: sans-serif;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  min-width: 180px;
+  position: fixed;
 ">
-  <!-- Animated Tick -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <path id="checkmark-path" d="M5 13l4 4L19 7" />
-  </svg>
+  <!-- Close Button (top-right corner) -->
+  <span onclick="closeSuccessPopup()" style="
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 20px;
+    color: #28a745;
+    cursor: pointer;
+    font-weight: bold;
+  ">&times;</span>
 
-  <!-- Message below tick -->
-  <p style="margin-top: 10px; font-size: 14px;">Message Sent<br>Successfully</p>
+  <!-- Green Circle with Tick -->
+  <div style="
+    background-color: #28a745;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path id="checkmark-path" d="M5 13l4 4L19 7" />
+    </svg>
+  </div>
+
+  <!-- Message BELOW the circle -->
+  <p style="margin-top: 12px; font-size: 14px; color: #28a745;">
+    Message Sent Successfully<br>I will contact you back soon.
+  </p>
 </div>
+
+
 
 
 
@@ -1297,6 +1385,10 @@
 
 
 
+function closeSuccessPopup() {
+  const popup = document.getElementById("success-popup");
+  popup.style.display = 'none';
+}
 
     // Form submission
 const form = document.getElementById("my-form");
