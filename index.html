@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -278,6 +279,9 @@
       text-decoration: none;
     }
 
+
+    /* Project Cards */
+    
     #portfolio-flters {
       list-style: none;
       display: flex;
@@ -305,8 +309,7 @@
       border-color: var(--accent);
       transform: translateY(-2px);
     }
-
-.portfolio-container {
+    .projects-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -314,54 +317,146 @@
 }
 
 @media (min-width:700px) {
-    .portfolio-item {
+    .project-card {
   flex: 1 1 300px;
-  max-width: 300px;
+  max-width: 400px;
 }
 }
-
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
 
     .project-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px var(--shadow);
+      background: var(--bg-card);
       border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
       transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
     .project-card:hover {
-      box-shadow: 0 10px 20px var(--shadow);
-      transform: translateY(-5px);
+      border-color: var(--accent);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
     }
 
-    .card-image {
-      height: 200px;
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-image {
+      height: 220px;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: var(--accent);
+      position: relative;
       overflow: hidden;
-      background: var(--bg-secondary);
     }
 
-    .card-image img {
+    .project-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+      transition: left 0.5s ease;
     }
 
-    .card-content {
-      padding: 1.5rem;
+    .project-card:hover .project-image::after {
+      left: 100%;
+    }
+
+    .project-content {
+      padding: 2rem;
     }
 
     .project-title {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
       color: var(--text-primary);
     }
 
     .project-description {
       color: var(--text-secondary);
       margin-bottom: 1.5rem;
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tech span {
+      padding: 0.4rem 0.9rem;
+      background: var(--accent-glow);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-links a {
+      flex: 1;
+      padding: 0.75rem;
+      text-align: center;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .link-github {
+      background: var(--bg-secondary);
+      border: 2px solid var(--border);
+      color: var(--text-primary);
+    }
+
+    .link-github:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .link-live {
+      background: var(--accent);
+      color: white;
+      border: 2px solid var(--accent);
+    }
+
+    .link-live:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
     }
 
     .icon-box {
@@ -840,7 +935,7 @@
   <ul>
     <li><a href="#hero" class="active"><i class="fas fa-home"></i><span>Home</span></a></li>
     <li><a href="#about"><i class="fas fa-user"></i><span>About</span></a></li>
-    <li><a href="#portfolio"><i class="fas fa-book"></i><span>Portfolio</span></a></li>
+    <li><a href="#projects"><i class="fas fa-book"></i><span>Projects</span></a></li>
     <li><a href="#services"><i class="fas fa-server"></i><span>Services</span></a></li>
     <li><a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
     <li><a href="#resume"><i class="fas fa-file"></i><span>Resume</span></a></li>
@@ -897,13 +992,12 @@
       </div>
     </section>
 
-    <section id="portfolio" class="section-bg">
+     <section id="projects">
       <div class="container">
         <div class="section-title">
-          <h2>Portfolio</h2>
-           <blockquote class="intro-quote">Here are some of my backend and automation projects demonstrating my skills in API development, automation scripting, cloud deployments, and DevOps. </blockquote>
+          <h2>Featured Projects</h2>
+          <p>Showcasing scalable backend systems, automation solutions, and cloud infrastructure</p>
         </div>
-
         <div>
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
@@ -912,55 +1006,92 @@
             <li data-filter="devops">DevOps</li>
           </ul>
         </div>
+        <div class="projects-grid">
+            <div class="portfolio-item filter-automation">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">E-Commerce API Platform</h3>
+              <p class="project-description">
+                Microservices-based REST API handling 10K+ requests/sec with JWT authentication, payment gateway integration, and real-time inventory management.
+              </p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>Redis</span>
+                <span>Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/shivamnox" class="link-github" target="_blank">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="link-live">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+</div>
 
-        <div class="portfolio-container">
+ <div class="portfolio-item filter-devops">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">DevOps Automation Suite</h3>
+              <p class="project-description">
+                Complete CI/CD pipeline automation with GitHub Actions, automated testing, Docker containerization, and zero-downtime deployment strategies.
+              </p>
+              <div class="project-tech">
+                <span>GitHub Actions</span>
+                <span>Docker</span>
+                <span>Terraform</span>
+                <span>AWS</span>
+                <span>Python</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/shivamnox" class="link-github" target="_blank">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="link-live">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+</div>
+<div class="portfolio-item filter-backend">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Infrastructure as Code Platform</h3>
+              <p class="project-description">
+                Automated cloud infrastructure provisioning using Terraform and Ansible. Manages multi-region deployments with auto-scaling and load balancing.
+              </p>
+              <div class="project-tech">
+                <span>Terraform</span>
+                <span>AWS</span>
+                <span>Kubernetes</span>
+                <span>Ansible</span>
+                <span>Prometheus</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/shivamnox" class="link-github" target="_blank">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="link-live">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
           <div class="portfolio-item filter-backend">
-            <div class="project-card">
-              <div class="card-image">
-                <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/000/374/836/datas/original.PNG" alt="API Project">
-              </div>
-              <div class="card-content">
-                <h2 class="project-title">RESTful API for E-commerce</h2>
-                <p class="project-description">Designed and implemented secure, scalable REST APIs in Node.js and Express, integrated with MongoDB and Redis, deployed on AWS.</p>
-                <div style="display:flex;justify-content:center;gap:1rem;">
-                  <a href="https://github.com/shivamnox/ecommerce-api" target="_blank" class="btn btn-small">View Code</a>
-                  <a href="#" class="btn btn-small btn-outline">Live Demo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-item filter-automation">
-            <div class="project-card">
-              <div class="card-image">
-                <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/000/374/836/datas/original.PNG" alt="Automation Project">
-              </div>
-              <div class="card-content">
-                <h2 class="project-title">CI/CD Pipeline Automation</h2>
-                <p class="project-description">Set up automated CI/CD pipelines using GitHub Actions and Docker for test, build, and deployment workflows.</p>
-                <div style="display:flex;justify-content:center;gap:1rem;">
-                  <a href="https://github.com/shivamnox" target="_blank" class="btn btn-small">View Code</a>
-                  <a href="#" class="btn btn-small btn-outline">Live Demo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-item filter-devops">
-            <div class="project-card">
-              <div class="card-image">
-                <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/000/374/836/datas/original.PNG" alt="DevOps Project">
-              </div>
-              <div class="card-content">
-                <h2 class="project-title">Infrastructure as Code (IaC)</h2>
-                <p class="project-description">Automated infrastructure provisioning with Terraform on AWS and GCP. Configured Docker and Kubernetes for scalable deployments.</p>
-                <div style="display:flex;justify-content:center;gap:1rem;">
-                  <a href="https://github.com/shivamnox" target="_blank" class="btn btn-small">View Code</a>
-                  <a href="#" class="btn btn-small btn-outline">Live Demo</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -1270,7 +1401,7 @@
   font-family: sans-serif;
   flex-direction: column;
   align-items: center;
-  background: transparent;
+  background: white;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
