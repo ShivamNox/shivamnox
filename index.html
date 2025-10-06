@@ -47,12 +47,6 @@
 }
 
 
-
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
@@ -195,10 +189,15 @@
       height: 200px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: left;
       background: black;
       color: white;
       text-align: left;
+    }
+    @media (min-width:769px) {
+            #hero {
+                padding-left:150px;
+    }
     }
 
     #hero h1 {
@@ -609,17 +608,18 @@
       justify-content: center;
       text-decoration: none;
       box-shadow: 0 4px 12px var(--shadow);
-      opacity: 1;
-      visibility: visible;
-      transition: all 0.3s ease;
-      transform: translateY(20px);
+  opacity: 0; /* hidden initially */
+  visibility: hidden; /* hidden initially */
+  transform: translateY(20px);
+  transition: all 0.3s ease;
     }
 
     .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 
     .back-to-top:hover {
       box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
@@ -677,7 +677,141 @@
         font-size: 1.75rem;
       }
     }
+    .intro-quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  border-left: 4px solid var(--primary-color, #3498db);
+  padding: 1rem 1.5rem;
+  background-color: #f9f9f9;
+  margin: 1.5rem 0;
+  color: var(--text-secondary, #555);
+  line-height: 1.6;
+  border-radius: 6px;
+  position: relative;
+}
+
+.intro-quote::before {
+  content: "“";
+  font-size: 2rem;
+  color: var(--primary-color, #3498db);
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.intro-quote::after {
+  content: "”";
+  font-size: 2rem;
+  color: var(--primary-color, #3498db);
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
   </style>
+  <style>
+  .cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+    color: var(--text-primary, #000);
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const backToTopBtn = document.querySelector(".back-to-top");
+
+    // Show/hide button on scroll
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+
+    // Custom smooth scroll to top over 3–4 seconds
+    backToTopBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      smoothScrollToTop(1000); // duration in ms
+    });
+
+    function smoothScrollToTop(duration) {
+      const start = window.scrollY;
+      const startTime = performance.now();
+
+      function scrollStep(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1); // cap progress at 1
+
+        // Ease-out function for smooth deceleration
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo(0, start * (1 - ease));
+
+        if (progress < 1) {
+          requestAnimationFrame(scrollStep);
+        }
+      }
+
+      requestAnimationFrame(scrollStep);
+    }
+  });
+  
+  
+
+</script>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const phrases = [
+      "a Backend Developer",
+      "a Automation Engineer",
+      "a DevOps Enthusiast"
+    ];
+
+    const typedText = document.getElementById("typed-text");
+    const cursor = document.querySelector(".cursor");
+
+    let currentPhraseIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const delayBetweenPhrases = 1500;
+
+    function typeEffect() {
+      const currentPhrase = phrases[currentPhraseIndex];
+
+      if (isDeleting) {
+        typedText.textContent = currentPhrase.substring(0, currentCharIndex--);
+      } else {
+        typedText.textContent = currentPhrase.substring(0, currentCharIndex++);
+      }
+
+      if (!isDeleting && currentCharIndex === currentPhrase.length + 1) {
+        isDeleting = true;
+        setTimeout(typeEffect, delayBetweenPhrases);
+      } else if (isDeleting && currentCharIndex === 0) {
+        isDeleting = false;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(typeEffect, 500);
+      } else {
+        setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
+      }
+    }
+
+    typeEffect();
+  });
+</script>
+
 </head>
 <body>
   <button type="button" class="mobile-nav-toggle" onclick="toggleMobileNav()">
@@ -695,32 +829,38 @@
       </div>
     </div>
 
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="fas fa-home"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="fas fa-user"></i><span>About</span></a></li>
-        <li><a href="#portfolio"><i class="fas fa-book"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="fas fa-server"></i><span>Services</span></a></li>
-        <li><a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
-        <li><a href="#resume"><i class="fas fa-file"></i><span>Resume</span></a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
+<nav class="nav-menu">
+  <ul>
+    <li><a href="#hero" class="active"><i class="fas fa-home"></i><span>Home</span></a></li>
+    <li><a href="#about"><i class="fas fa-user"></i><span>About</span></a></li>
+    <li><a href="#portfolio"><i class="fas fa-book"></i><span>Portfolio</span></a></li>
+    <li><a href="#services"><i class="fas fa-server"></i><span>Services</span></a></li>
+    <li><a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
+    <li><a href="#resume"><i class="fas fa-file"></i><span>Resume</span></a></li>
+    <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+  </ul>
+</nav>
+
   </header>
 
   <main id="main">
-    <section id="hero">
-      <div class="hero-container">
-        <h1>Shivam Kumar</h1>
-        <p>I'm a <span class="typed">Backend Developer & Automation Engineer</span></p>
-      </div>
-    </section>
+<section id="hero">
+  <div class="hero-container">
+    <h1>Shivam Kumar</h1>
+    <p>I'm <span id="typed-text"></span><span class="cursor">|</span></p>
+  </div>
+</section>
+
+
 
     <section id="about">
       <div class="container">
         <div class="section-title">
           <h2>About Me</h2>
-          <p>I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating cloud infrastructure.</p>
+  <blockquote class="intro-quote">
+  I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating cloud infrastructure.
+</blockquote>
+
         </div>
 
         <div class="about-me-row">
@@ -1036,9 +1176,10 @@
     </div>
   </footer>
 
-  <a href="#hero" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </a>
+<a href="javascript:void(0)" class="back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</a>
+
 
   <script>
     // Mobile Navigation Toggle
