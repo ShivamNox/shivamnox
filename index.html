@@ -11,25 +11,13 @@
   <meta name="author" content="ShivamNox">
   <meta name="keywords" content="backend developer, automation engineer, nodejs, python, api development, devops, ci/cd, docker, aws, cloud, database, rest-api, shivamnox, shivam kumar"/>
 
-        <!-- WhatsApp / General link preview -->
-    <meta property="og:title" content="Shivam Kumar | Backend Developer & Automation Engineer" />
-    <meta property="og:description" content="I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating workflows." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/ShivamNox/shivamnox.github.com/refs/heads/main/logo.png" /> <!-- Replace with your actual logo -->
-    <meta property="og:url" content="https://shivamnox.github.io" />
-    <meta property="og:type" content="website" />
-
-    <!-- Optional: WhatsApp-specific meta (mostly uses Open Graph) -->
-    <meta name="whatsapp:title" content="Shivam Kumar | Backend Developer & Automation Engineer" />
-    <meta name="whatsapp:description" content="I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating workflows." />
-    <meta name="whatsapp:image" content="https://raw.githubusercontent.com/ShivamNox/shivamnox.github.com/refs/heads/main/logo.png" />
-
-
-  <meta name="theme-color" content="#0073aa" />
+  <!-- WhatsApp / General link preview -->
   <meta property="og:title" content="Shivam Kumar | Backend Developer & Automation Engineer" />
-  <meta property="og:description" content="Experienced in backend development, automation engineering, API design, cloud, CI/CD, and DevOps. Let's build scalable and reliable systems together." />
+  <meta property="og:description" content="I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating workflows." />
   <meta property="og:image" content="https://raw.githubusercontent.com/ShivamNox/shivamnox.github.com/refs/heads/main/logo.png" />
-  <meta property="og:url" content="https://shivamnox.github.io/" />
-  <meta property="og:type" content="website, portfolio" />
+  <meta property="og:url" content="https://shivamnox.github.io" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0073aa" />
   <meta name="google-site-verification" content="nkYmV7SZkQHkcvwnUho7juDqi7kgik3meTuF5wjtqx8" />
   
   <!-- Favicons -->
@@ -41,26 +29,24 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet"/>
 
-  
- <style>
+  <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-:root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #002e63;
-  --text-secondary: #4a5568;
-  --accent: #0d98ba; /* Dark, muted blue */
-  --accent-dark:#0d98ba; /* Darker, more saturated blue */
-  --header-bg: #1a1a1a;
-  --border: #e2e8f0;
-  --shadow: rgba(0, 0, 0, 0.1);
-}
-
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --text-primary: #002e63;
+      --text-secondary: #4a5568;
+      --accent: #0d98ba;
+      --accent-dark:#0d98ba;
+      --header-bg: #1a1a1a;
+      --border: #e2e8f0;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -209,10 +195,11 @@
       color: white;
       text-align: left;
     }
+
     @media (min-width:769px) {
-            #hero {
-                padding-left:150px;
-    }
+      #hero {
+        padding-left:150px;
+      }
     }
 
     #hero h1 {
@@ -243,15 +230,14 @@
     }
     
     .section-title h2::after {
-  content: '';
-  display: block;
-  width: 100%;
-  max-width: 100px;
-  height: 2px;
-  background-color: black;
-  margin: 0.5rem 0 auto; /* top auto bottom left/right */
-}
-
+      content: '';
+      display: block;
+      width: 100%;
+      max-width: 100px;
+      height: 2px;
+      background-color: black;
+      margin: 0.5rem 0 auto;
+    }
 
     .section-title p {
       color: var(--text-secondary);
@@ -303,9 +289,6 @@
       text-decoration: none;
     }
 
-
-    /* Project Cards */
-    
     #portfolio-flters {
       list-style: none;
       display: flex;
@@ -333,23 +316,18 @@
       border-color: var(--accent);
       transform: translateY(-2px);
     }
-    .projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content:left;
-}
 
-@media (min-width:700px) {
-    .project-card {
-  flex: 1 1 300px;
-  max-width: 400px;
-}
-}
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 2rem;
+    }
+
+    @media (min-width:700px) {
+      .project-card {
+        flex: 1 1 300px;
+        max-width: 400px;
+      }
     }
 
     .project-card {
@@ -544,19 +522,18 @@
       margin-bottom: 2rem;
     }
 
-.skill {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* spacing between icon and text */
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: var(--text-primary);
-}
+    .skill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
 
-.skill i.val {
-  margin-left: auto; /* pushes percentage to the right */
-}
-
+    .skill i.val {
+      margin-left: auto;
+    }
 
     .progress-bar-wrap {
       background: var(--border);
@@ -735,21 +712,74 @@
       justify-content: center;
       text-decoration: none;
       box-shadow: 0 4px 12px var(--shadow);
-  opacity: 0; /* hidden initially */
-  visibility: hidden; /* hidden initially */
-  transform: translateY(20px);
-  transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
     }
 
     .back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
 
     .back-to-top:hover {
       box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .cursor {
+      display: inline-block;
+      animation: blink 0.7s infinite;
+      color: var(--text-primary, #000);
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .intro-quote {
+      font-style: italic;
+      font-size: 1.1rem;
+      border-left: 4px solid var(--primary-color, #3498db);
+      padding: 1rem 1.5rem;
+      background-color: #f9f9f9;
+      margin: 1.5rem 0;
+      color: var(--text-secondary, #555);
+      line-height: 1.6;
+      border-radius: 6px;
+      position: relative;
+    }
+
+    .intro-quote::before {
+      content: """;
+      font-size: 2rem;
+      color: var(--primary-color, #3498db);
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+
+    .intro-quote::after {
+      content: """;
+      font-size: 2rem;
+      color: var(--primary-color, #3498db);
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+    }
+
+    #checkmark-path {
+      stroke-dasharray: 24;
+      stroke-dashoffset: 24;
+      animation: draw-check 0.9s ease forwards;
+    }
+
+    @keyframes draw-check {
+      to {
+        stroke-dashoffset: 0;
+      }
     }
 
     @media (max-width: 1024px) {
@@ -804,152 +834,15 @@
         font-size: 1.75rem;
       }
     }
-    
-    /* CSS of Bracket, Section's Discreption */
-    .intro-quote {
-  font-style: italic;
-  font-size: 1.1rem;
-  border-left: 4px solid var(--primary-color, #3498db);
-  padding: 1rem 1.5rem;
-  background-color: #f9f9f9;
-  margin: 1.5rem 0;
-  color: var(--text-secondary, #555);
-  line-height: 1.6;
-  border-radius: 6px;
-  position: relative;
-}
-
-.intro-quote::before {
-  content: "“";
-  font-size: 2rem;
-  color: var(--primary-color, #3498db);
-  position: absolute;
-  top: 0;
-  left: 10px;
-}
-
-.intro-quote::after {
-  content: "”";
-  font-size: 2rem;
-  color: var(--primary-color, #3498db);
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-}
   </style>
-  <style>
-  .cursor {
-    display: inline-block;
-    animation: blink 0.7s infinite;
-    color: var(--text-primary, #000);
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-</style>
-
-   <!-- ====== JS For Back To Top Icon Functionality ====== -->
-   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const backToTopBtn = document.querySelector(".back-to-top");
-
-    // Show/hide button on scroll
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 200) {
-        backToTopBtn.classList.add("show");
-      } else {
-        backToTopBtn.classList.remove("show");
-      }
-    });
-
-    // Custom smooth scroll to top over 3–4 seconds
-    backToTopBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      smoothScrollToTop(1000); // duration in ms
-    });
-
-    function smoothScrollToTop(duration) {
-      const start = window.scrollY;
-      const startTime = performance.now();
-
-      function scrollStep(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1); // cap progress at 1
-
-        // Ease-out function for smooth deceleration
-        const ease = 1 - Math.pow(1 - progress, 3);
-
-        window.scrollTo(0, start * (1 - ease));
-
-        if (progress < 1) {
-          requestAnimationFrame(scrollStep);
-        }
-      }
-
-      requestAnimationFrame(scrollStep);
-    }
-  });
-  
-  
-
-</script>
-
-   <!-- ====== JS For Automatically show title in hero section ====== -->
-   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const phrases = [
-      "a Backend Developer",
-      "a Automation Engineer",
-      "a DevOps Enthusiast"
-    ];
-
-    const typedText = document.getElementById("typed-text");
-    const cursor = document.querySelector(".cursor");
-
-    let currentPhraseIndex = 0;
-    let currentCharIndex = 0;
-    let isDeleting = false;
-
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const delayBetweenPhrases = 1500;
-
-    function typeEffect() {
-      const currentPhrase = phrases[currentPhraseIndex];
-
-      if (isDeleting) {
-        typedText.textContent = currentPhrase.substring(0, currentCharIndex--);
-      } else {
-        typedText.textContent = currentPhrase.substring(0, currentCharIndex++);
-      }
-
-      if (!isDeleting && currentCharIndex === currentPhrase.length + 1) {
-        isDeleting = true;
-        setTimeout(typeEffect, delayBetweenPhrases);
-      } else if (isDeleting && currentCharIndex === 0) {
-        isDeleting = false;
-        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-        setTimeout(typeEffect, 500);
-      } else {
-        setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
-      }
-    }
-
-    typeEffect();
-  });
-</script>
-
 </head>
 <body>
-    
-    <!-- ====== Mobile Menu Icon/Toggle ====== -->
+  <!-- Mobile Menu Toggle -->
   <button type="button" class="mobile-nav-toggle" onclick="toggleMobileNav()">
     <i class="fas fa-bars"></i>
   </button>
 
-  <!-- ====== Header Content/Sidebar ====== -->
+  <!-- Header Sidebar -->
   <header id="header">
     <div class="profile">
       <img src="https://avatars.githubusercontent.com/u/172183580?v=4" alt="Shivam Kumar">
@@ -961,41 +854,35 @@
       </div>
     </div>
 
-<nav class="nav-menu">
-  <ul>
-    <li><a href="#hero" class="active"><i class="fas fa-home"></i><span>Home</span></a></li>
-    <li><a href="#about"><i class="fas fa-user"></i><span>About</span></a></li>
-    <li><a href="#projects"><i class="fas fa-book"></i><span>Projects</span></a></li>
-    <li><a href="#services"><i class="fas fa-server"></i><span>Services</span></a></li>
-    <li><a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
-    <li><a href="#resume"><i class="fas fa-file"></i><span>Resume</span></a></li>
-    <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
-  </ul>
-</nav>
-
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="fas fa-user"></i><span>About</span></a></li>
+        <li><a href="#projects"><i class="fas fa-book"></i><span>Projects</span></a></li>
+        <li><a href="#services"><i class="fas fa-server"></i><span>Services</span></a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
+        <li><a href="#resume"><i class="fas fa-file"></i><span>Resume</span></a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
   </header>
 
-
-  <!-- ====== Main Content Start ====== -->
+  <!-- Main Content -->
   <main id="main">
-      
-    <!-- ======Hero/Home Section Start ====== -->
+    <!-- Hero Section -->
     <section id="hero">
       <div class="hero-container">
         <h1>Shivam Kumar</h1>
         <p>I'm <span id="typed-text"></span><span class="cursor">|</span></p>
       </div>
     </section>
-    <!-- ====== Hero/Home Section Start ====== -->
 
-
-    <!-- ====== About Section Start ====== -->
+    <!-- About Section -->
     <section id="about">
       <div class="container">
         <div class="section-title">
           <h2>About Me</h2>
-          <blockquote class="intro-quote">I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating cloud infrastructure.
-           </blockquote>
+          <blockquote class="intro-quote">I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating cloud infrastructure.</blockquote>
         </div>
 
         <div class="about-me-row">
@@ -1024,9 +911,8 @@
         </div>
       </div>
     </section>
-    <!-- ====== About Section End ====== -->
-    
-    <!-- Projects Section Start -->
+
+    <!-- Projects Section -->
     <section id="projects">
       <div class="container">
         <div class="section-title">
@@ -1042,103 +928,102 @@
           </ul>
         </div>
         <div class="projects-grid">
-            <div class="portfolio-item  filter-backend">
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">E-Commerce API Platform</h3>
-              <p class="project-description">
-                Microservices-based REST API handling 10K+ requests/sec with JWT authentication, payment gateway integration, and real-time inventory management.
-              </p>
-              <div class="project-tech">
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-                <span>Redis</span>
-                <span>Docker</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/shivamnox" class="link-github" target="_blank">
-                  <i class="fab fa-github"></i> Code
-                </a>
-                <a href="#" class="link-live">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-</div>
-
- <div class="portfolio-item  filter-automation">
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fas fa-robot"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">DevOps Automation Suite</h3>
-              <p class="project-description">
-                Complete CI/CD pipeline automation with GitHub Actions, automated testing, Docker containerization, and zero-downtime deployment strategies.
-              </p>
-              <div class="project-tech">
-                <span>GitHub Actions</span>
-                <span>Docker</span>
-                <span>Terraform</span>
-                <span>AWS</span>
-                <span>Python</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/shivamnox" class="link-github" target="_blank">
-                  <i class="fab fa-github"></i> Code
-                </a>
-                <a href="#" class="link-live">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-</div>
-
-<div class="portfolio-item filter-devops">
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fas fa-cloud"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Infrastructure as Code Platform</h3>
-              <p class="project-description">
-                Automated cloud infrastructure provisioning using Terraform and Ansible. Manages multi-region deployments with auto-scaling and load balancing.
-              </p>
-              <div class="project-tech">
-                <span>Terraform</span>
-                <span>AWS</span>
-                <span>Kubernetes</span>
-                <span>Ansible</span>
-                <span>Prometheus</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/shivamnox" class="link-github" target="_blank">
-                  <i class="fab fa-github"></i> Code
-                </a>
-                <a href="#" class="link-live">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
           <div class="portfolio-item filter-backend">
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">E-Commerce API Platform</h3>
+                <p class="project-description">
+                  Microservices-based REST API handling 10K+ requests/sec with JWT authentication, payment gateway integration, and real-time inventory management.
+                </p>
+                <div class="project-tech">
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>MongoDB</span>
+                  <span>Redis</span>
+                  <span>Docker</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/shivamnox" class="link-github" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                  </a>
+                  <a href="#" class="link-live">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item filter-automation">
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">DevOps Automation Suite</h3>
+                <p class="project-description">
+                  Complete CI/CD pipeline automation with GitHub Actions, automated testing, Docker containerization, and zero-downtime deployment strategies.
+                </p>
+                <div class="project-tech">
+                  <span>GitHub Actions</span>
+                  <span>Docker</span>
+                  <span>Terraform</span>
+                  <span>AWS</span>
+                  <span>Python</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/shivamnox" class="link-github" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                  </a>
+                  <a href="#" class="link-live">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item filter-devops">
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Infrastructure as Code Platform</h3>
+                <p class="project-description">
+                  Automated cloud infrastructure provisioning using Terraform and Ansible. Manages multi-region deployments with auto-scaling and load balancing.
+                </p>
+                <div class="project-tech">
+                  <span>Terraform</span>
+                  <span>AWS</span>
+                  <span>Kubernetes</span>
+                  <span>Ansible</span>
+                  <span>Prometheus</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/shivamnox" class="link-github" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                  </a>
+                  <a href="#" class="link-live">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Project Section End -->
 
-    <!-- Services Section Start -->
+    <!-- Services Section -->
     <section id="services">
       <div class="container">
         <div class="section-title">
           <h2>Services</h2>
-           <blockquote class="intro-quote">I offer a range of backend and automation engineering services to help teams build, scale, and automate infrastructure and systems. </blockquote>
+          <blockquote class="intro-quote">I offer a range of backend and automation engineering services to help teams build, scale, and automate infrastructure and systems.</blockquote>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
@@ -1180,127 +1065,71 @@
         </div>
       </div>
     </section>
-    <!-- Services Section End-->
-    
-    <!-- Skills Section Start-->
+
+    <!-- Skills Section -->
     <section id="skills" class="section-bg">
-  <div class="container">
-    <div class="section-title">
-      <h2>Skills</h2>
-       <blockquote class="intro-quote">Here are some of the technologies and tools I work with as a backend developer and automation engineer. </blockquote>
-    </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <blockquote class="intro-quote">Here are some of the technologies and tools I work with as a backend developer and automation engineer.</blockquote>
+        </div>
 
-    <div class="skills-content">
-      <div>
-        <div class="progress">
-          <span class="skill"><i class="fab fa-node-js"></i> Node.js & Express <i class="val">90%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></div>
-        </div>
-        <div class="progress">
-          <span class="skill"><i class="fab fa-python"></i> Python <i class="val">85%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
-        </div>
-        <div class="progress">
-          <span class="skill"><i class="fas fa-project-diagram"></i> REST API / GraphQL <i class="val">90%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></div>
-        </div>
-        <div class="progress">
-          <span class="skill"><i class="fas fa-database"></i> SQL (PostgreSQL/MySQL) <i class="val">85%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
-        </div>
-        <div class="progress">
-          <span class="skill"><i class="fas fa-leaf"></i> MongoDB / Redis <i class="val">75%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 75%"></div></div>
+        <div class="skills-content">
+          <div>
+            <div class="progress">
+              <span class="skill"><i class="fab fa-node-js"></i> Node.js & Express <i class="val">90%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill"><i class="fab fa-python"></i> Python <i class="val">85%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill"><i class="fas fa-project-diagram"></i> REST API / GraphQL <i class="val">90%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill"><i class="fas fa-database"></i> SQL (PostgreSQL/MySQL) <i class="val">85%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill"><i class="fas fa-leaf"></i> MongoDB / Redis <i class="val">75%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 75%"></div></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="progress">
+              <span class="skill"><i class="fab fa-docker"></i> Docker & Kubernetes <i class="val">80%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill"><i class="fab fa-aws"></i> AWS / GCP <i class="val">70%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 70%"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill"><i class="fas fa-code-branch"></i> CI/CD (GitHub Actions, Jenkins) <i class="val">80%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill"><i class="fas fa-terminal"></i> Automation Scripting <i class="val">85%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill"><i class="fab fa-git-alt"></i> Git & Version Control <i class="val">95%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" style="width: 95%"></div></div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div>
-        <div class="progress">
-          <span class="skill"><i class="fab fa-docker"></i> Docker & Kubernetes <i class="val">80%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></div>
-        </div>
-        <div class="progress">
-          <span class="skill"><i class="fab fa-aws"></i> AWS / GCP <i class="val">70%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 70%"></div></div>
-        </div>
-        <div class="progress">
-          <span class="skill"><i class="fas fa-code-branch"></i> CI/CD (GitHub Actions, Jenkins) <i class="val">80%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></div>
-        </div>
-        <div class="progress">
-          <span class="skill"><i class="fas fa-terminal"></i> Automation Scripting <i class="val">85%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></div>
-        </div>
-        <div class="progress">
-          <span class="skill"><i class="fab fa-git-alt"></i> Git & Version Control <i class="val">95%</i></span>
-          <div class="progress-bar-wrap"><div class="progress-bar" style="width: 95%"></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    <!-- Skills Sectionend End -->
-
-    <!-- Skilss Progress bar Dynamiclly Load JS for -->
-    <script>
-     // Helper: animate progress bar
-     function animateProgressBar(bar, valueElement, targetPercent, duration = 1000) {
-    let start = null;
-    let initial = 0;
-
-    function step(timestamp) {
-      if (!start) start = timestamp;
-      const progress = Math.min((timestamp - start) / duration, 1);
-      const currentPercent = Math.floor(progress * targetPercent);
-      bar.style.width = currentPercent + '%';
-      valueElement.textContent = currentPercent + '%';
-
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
-    }
-
-       requestAnimationFrame(step);
-      }
-
-  // Observer to detect when #skills section comes into view
-  let hasAnimated = false;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !hasAnimated) {
-        hasAnimated = true;
-
-        // Select all progress bars
-        document.querySelectorAll('.progress').forEach(progressEl => {
-          const bar = progressEl.querySelector('.progress-bar');
-          const valueEl = progressEl.querySelector('.val');
-          const target = parseInt(valueEl.textContent.replace('%', ''), 10);
-
-          // Start from 0
-          bar.style.width = '0%';
-          valueEl.textContent = '0%';
-
-          animateProgressBar(bar, valueEl, target, 1000); // animate to target
-        });
-      }
-    });
-  }, {
-    threshold: 0.3 // trigger when 30% of section is visible
-  });
-
-  // Start observing the skills section
-  const skillsSection = document.getElementById('skills');
-  if (skillsSection) {
-    observer.observe(skillsSection);
-  }
-</script>
-
-    <!-- Resume Section Start -->
+    <!-- Resume Section -->
     <section id="resume">
       <div class="container">
         <div class="section-title">
           <h2>Resume</h2>
-           <blockquote class="intro-quote">Backend Developer & Automation Engineer skilled in Node.js, Python, cloud, databases, and DevOps. Focused on building scalable systems, automating processes, and delivering robust backend solutions. </blockquote>
+          <blockquote class="intro-quote">Backend Developer & Automation Engineer skilled in Node.js, Python, cloud, databases, and DevOps. Focused on building scalable systems, automating processes, and delivering robust backend solutions.</blockquote>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
@@ -1352,14 +1181,13 @@
         </div>
       </div>
     </section>
-    <!-- Resume Section End-->
-    
-    <!-- Contact Section Start -->
+
+    <!-- Contact Section -->
     <section id="contact" class="section-bg">
       <div class="container">
         <div class="section-title">
           <h2>Get in Touch</h2>
-           <blockquote class="intro-quote">Interested in working together, or have a question about backend development or automation? Reach out by email or use the form below. </blockquote>
+          <blockquote class="intro-quote">Interested in working together, or have a question about backend development or automation? Reach out by email or use the form below.</blockquote>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
@@ -1402,11 +1230,9 @@
         </div>
       </div>
     </section>
-    <!-- Contact Section End-->
   </main>
-  <!-- ====== Main Content End ====== -->
 
-  <!-- Footer Content Section -->
+  <!-- Footer -->
   <footer id="footer">
     <div class="container">
       <div class="copyright">
@@ -1414,284 +1240,62 @@
       </div>
     </div>
   </footer>
-  
-    <!-- Back to Top Icon -->
-    <a href="javascript:void(0)" class="back-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
 
+  <!-- Back to Top Button -->
+  <a href="javascript:void(0)" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
-<!-- Successfully Message Sent Popup CSS -->
-<style>
-#checkmark-path {
-  stroke-dasharray: 24;
-  stroke-dashoffset: 24;
-  animation: draw-check 0.9s ease forwards;
-}
-@keyframes draw-check {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-</style>
-<!-- Successfully Message Sent Popup CSS End-->
-
-
-<!-- Successfully Message Sent Popup -->
-<div id="success-popup" style="
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  text-align: center;
-  color: white;
-  font-family: sans-serif;
-  flex-direction: column;
-  align-items: center;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  min-width: 180px;
-  position: fixed;
-">
-  <!-- Close Button (top-right corner) -->
-  <span onclick="closeSuccessPopup()" style="
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 20px;
-    color: #28a745;
-    cursor: pointer;
-    font-weight: bold;
-  ">&times;</span>
-
-  <!-- Green Circle with Tick -->
-  <div style="
-    background-color: #28a745;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
-    display: flex;
+  <!-- Success Popup -->
+  <div id="success-popup" style="
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    min-width: 180px;
   ">
-    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path id="checkmark-path" d="M5 13l4 4L19 7" />
-    </svg>
+    <span onclick="closeSuccessPopup()" style="
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 20px;
+      color: #28a745;
+      cursor: pointer;
+      font-weight: bold;
+    ">&times;</span>
+
+    <div style="
+      background-color: #28a745;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path id="checkmark-path" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+
+    <p style="margin-top: 12px; font-size: 14px; color: #28a745;">
+      Message Sent Successfully<br>I will contact you back soon.
+    </p>
   </div>
 
-  <!-- Message BELOW the circle -->
-  <p style="margin-top: 12px; font-size: 14px; color: #28a745;">
-    Message Sent Successfully<br>I will contact you back soon.
-  </p>
-</div>
-<!-- Successfully Message Sent Popup End -->
-
-
-
-
-  <script>
-    // Mobile Navigation Toggle
-    function toggleMobileNav() {
-      const header = document.getElementById('header');
-      header.classList.toggle('mobile-nav-active');
-    }
-
-    // Close mobile nav when clicking outside
-    document.addEventListener('click', function(e) {
-      const header = document.getElementById('header');
-      const toggle = document.querySelector('.mobile-nav-toggle');
-      if (header.classList.contains('mobile-nav-active') && 
-          !header.contains(e.target) && 
-          !toggle.contains(e.target)) {
-        header.classList.remove('mobile-nav-active');
-      }
-    });
-
-    // Close mobile nav when clicking a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', function() {
-        const header = document.getElementById('header');
-        header.classList.remove('mobile-nav-active');
-      });
-    });
-
-    // Active navigation based on scroll
-    window.addEventListener('scroll', function() {
-      const sections = document.querySelectorAll('section[id]');
-      const scrollY = window.pageYOffset;
-
-      sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 100;
-        const sectionId = current.getAttribute('id');
-        const navLink = document.querySelector('.nav-menu a[href="#' + sectionId + '"]');
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
-          if (navLink) navLink.classList.add('active');
-        }
-      });
-    });
-
-    // Portfolio filter
-    const filterButtons = document.querySelectorAll('#portfolio-flters li');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const filter = this.getAttribute('data-filter');
-        
-        filterButtons.forEach(btn => btn.classList.remove('filter-active'));
-        this.classList.add('filter-active');
-
-        portfolioItems.forEach(item => {
-          if (filter === '*' || item.classList.contains('filter-' + filter)) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      });
-    });
-
-
-
-
-   // Function for Close Message send Popup
-   function closeSuccessPopup() {
-     const popup = document.getElementById("success-popup");
-     popup.style.display = 'none';
-   }
-
-    // Form submission
-const form = document.getElementById("my-form");
-const popup = document.getElementById("success-popup");
-const checkmarkPath = document.getElementById("checkmark-path");
-const submitButton = form.querySelector('button[type="submit"]');
-
-async function handleSubmit(event) {
-  event.preventDefault();
-  const status = document.getElementById("my-form-status");
-  const data = new FormData(event.target);
-
-  // Disable button and show "Sending..."
-  submitButton.disabled = true;
-  submitButton.textContent = "Sending...";
-
-  try {
-    const response = await fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      form.reset();
-      showSuccessPopup();
-      status.innerHTML = "";
-    } else {
-      const data = await response.json();
-      if (data.errors) {
-        status.innerHTML = data.errors.map(e => e.message).join(", ");
-      } else {
-        status.innerHTML = "Oops! There was a problem submitting your form";
-      }
-    }
-  } catch (error) {
-    status.innerHTML = "Oops! There was a problem submitting your form";
-  }
-
-  // Re-enable button after submission (success or failure)
-  submitButton.disabled = false;
-  submitButton.textContent = "Send Message";
-}
-
-
-// Show Success Message Popup when message sent Successfully
-function showSuccessPopup() {
-  // Reset animation by removing and re-adding class (or resetting stroke-dashoffset)
-  checkmarkPath.style.animation = "none";
-  void checkmarkPath.offsetWidth;  // Trigger reflow to restart animation
-  checkmarkPath.style.animation = null; // Re-enable animation
-
-  popup.style.display = 'flex';  // Show popup
-
-  setTimeout(() => {
-    popup.style.display = 'none';  // Hide after 3 seconds
-  }, 3000);
-}
-
-form.addEventListener("submit", handleSubmit);
-
-
-// nav section
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-  </script>
-  
-  <!--   <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const header = document.querySelector('#header');
-  const offset = header ? header.offsetHeight : 0;
-
-function smoothScrollTo(target, duration = 2000) {
-  const headerHeight = offset; // header offset
-  const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-  
-  // Maximum scroll position to avoid scrolling beyond document
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollToPosition = Math.min(targetPosition, maxScroll);
-
-  const startPosition = window.scrollY;
-  const distance = scrollToPosition - startPosition;
-  const startTime = performance.now();
-
-  function animation(currentTime) {
-    const timeElapsed = currentTime - startTime;
-    const progress = Math.min(timeElapsed / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
-
-    window.scrollTo(0, startPosition + distance * ease);
-
-    if (progress < 1) {
-      requestAnimationFrame(animation);
-    }
-  }
-
-  requestAnimationFrame(animation);
-}
-
-
-
-  document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      const targetID = this.getAttribute('href').substring(1);
-      const target = document.getElementById(targetID);
-      if (target) {
-        smoothScrollTo(target, 2000);
-      }
-    });
-  });
-});
-
-</script> -->
+  <!-- JavaScript -->
+  <script src="/script.js"></script>
 </body>
 </html>
