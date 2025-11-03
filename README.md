@@ -6,7 +6,7 @@
 
 # 👋 Hi, I'm Shivam Kumar
 
-**Backend Developer | Node.js Enthusiast | CSE Student**
+**Backend Developer | Node.js & Automation Enthusiast | CSE Student**
 
 I'm passionate about building efficient backend systems, automating workflows, and experimenting with new technologies.  
 Currently exploring **Node.js**, **Express**, and **API development** to create scalable and reliable applications.
