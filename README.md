@@ -1,13 +1,14 @@
-
-<div>
-    <img align="right" src="https://komarev.com/ghpvc/?username=ShivamNox&label=👁️&color=0e75b6&style=flat" alt="ShivamNox" />
-</div>
-
-
 # 👋 Hi, I'm Shivam Kumar
 
 **Backend Developer | Node.js & Automation Enthusiast | CSE Student**
+---
 
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=ShivamNox&style=flat-square&color=blue" alt="Profile Views" />
+  <img src="https://img.shields.io/github/followers/ShivamNox?style=flat-square&color=green" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/ShivamNox?style=flat-square&color=yellow" alt="Stars" />
+</div>
+----
 I'm passionate about building efficient backend systems, automating workflows, and experimenting with new technologies.  
 Currently exploring **Node.js**, **Express**, and **API development** to create scalable and reliable applications.
 
