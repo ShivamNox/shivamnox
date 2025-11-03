@@ -14,22 +14,26 @@ Currently exploring **Node.js**, **Express**, and **API development** to create 
 ---
 
 ### 🧰 Tech Stack
-- **Languages:** JavaScript, TypeScript (learning)
-- **Backend:** Node.js, Express
-- **Database:** MongoDB
-- **Other:** Git, REST APIs, Telegram Bot API
+- **Languages:** JavaScript, TypeScript (learning)  
+- **Backend:** Node.js, Express  
+- **Database:** MongoDB  
+- **Other:** Git, REST APIs, Telegram Bot API  
 
 ---
 
 ### 📂 Projects
 - **[LearnaryHub](https://github.com/ShivamNox/LearnaryHub):** AI-powered EdTech dashboard.  
 - **[FileStoreBot](https://github.com/ShivamNox/File-Store-Telegram-Bot):** Telegram bot for file hosting.  
-- **[Ecommerce API](https://github.com/ShivamNox/ecommerce-api):** RESTful API for an e-commerce platform.
+- **[Ecommerce API](https://github.com/ShivamNox/ecommerce-api):** RESTful API for an e-commerce platform.  
 
 ---
 
 ### 📫 Connect With Me
-[Portfolio](https://shivamnox.github.io) • [LinkedIn](https://www.linkedin.com/in/shivamnox) • [Instagram](https://www.instagram.com/Shivamnox)
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=About.me&logoColor=white)](https://shivamnox.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shivamnox)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/Shivamnox)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shivamnox@gmail.com)
 
 ---
 
