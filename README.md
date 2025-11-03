@@ -21,13 +21,6 @@ Currently exploring **Node.js**, **Express**, and **API development** to create 
 
 ---
 
-### 📂 Projects
-- **[LearnaryHub](https://github.com/ShivamNox/LearnaryHub):** AI-powered EdTech dashboard.  
-- **[FileStoreBot](https://github.com/ShivamNox/File-Store-Telegram-Bot):** Telegram bot for file hosting.  
-- **[Ecommerce API](https://github.com/ShivamNox/ecommerce-api):** RESTful API for an e-commerce platform.  
-
----
-
 ### 📫 Connect With Me
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=About.me&logoColor=white)](https://shivamnox.github.io)
